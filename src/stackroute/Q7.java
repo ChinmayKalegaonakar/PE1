@@ -5,9 +5,10 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Q7 {
-	public void question_7() {
+	public String question_7(int input) {
 		Scanner sc = new Scanner(System.in);
-		int input = sc.nextInt();
+		
+		StringBuilder sb = new StringBuilder();
 		ArrayList<Integer> ll = new ArrayList<Integer>();
 		int r,rev=0,temp,sum=0;
 		temp=input;    
@@ -19,14 +20,15 @@ public class Q7 {
 			ll.add(r);
 		}  
 		Collections.sort(ll,Collections.reverseOrder());
-		System.out.println("Sorted numbers ");
+		sb.append("Sorted numbers \n");
+		
 		for(Integer i: ll) {
-			System.out.print(i+" ,");
+			sb.append(i+" ,");
 		}
-		System.out.println();
-		System.out.println("sum of even numbers = "+ sum );
-		System.out.print(sum>15?"True":"False");
-		System.out.println();
+		sb.append("\n");
+		sb.append("sum of even numbers = "+ sum +"\n");
+		sb.append(sum>15?"True":"False"+"\n");
+		return sb.toString();
 		
 	}
 }

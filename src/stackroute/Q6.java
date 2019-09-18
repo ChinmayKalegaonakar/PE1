@@ -3,19 +3,18 @@ package stackroute;
 import java.util.Scanner;
 
 public class Q6 {
-	public void question_6() {
-		Scanner sc = new Scanner(System.in);
-		String input = sc.nextLine();
+	public String question_6(String input) {
+		
+		
 		int n = input.charAt(0);
 		if(n>=48 && n<=57) {
-			System.out.print("Digit");
+			return "Digit";
 		}else if(n>=65 && n <=90) {
-			System.out.print("Capital Letter");
+			return "Capital Letter";
 		}else if(n>=97 && n<=122) {
-			System.out.print("Small Letter");
+			return "Small Letter";
 		}else {
-			System.out.print("Special Character");
+			return "Special Character";
 		}
-		System.out.println();
 	}
 }
